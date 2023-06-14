@@ -4,7 +4,7 @@
 #include <cassert>
 #include <cstdint>
 #include <vector>
-#include "../lccs_bucket/bucketAlg/lcs_int.h"
+#include "lcs_int.h"
 
 #include "def.h"
 #include "util.h"

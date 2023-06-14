@@ -9,7 +9,7 @@
 #include <array>
 #include <functional>
 #include <unordered_map>
-#include "../myndarray.h"
+#include "myndarray.h"
 
 namespace mylccs {
 
