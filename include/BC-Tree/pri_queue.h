@@ -51,22 +51,22 @@ public:
     inline void reset() { num_ = 0; }
 
     // -------------------------------------------------------------------------
-    inline float min_key() { return num_ > 0 ? list_[0].key_ : MAXREAL; }
+    inline float min_key() const { return num_ > 0 ? list_[0].key_ : MAXREAL; }
 
     // -------------------------------------------------------------------------
-    inline float max_key() { return num_ >= k_ ? list_[k_-1].key_ : MAXREAL; }
+    inline float max_key() const { return num_ >= k_ ? list_[k_-1].key_ : MAXREAL; }
 
     // -------------------------------------------------------------------------
-    inline float ith_key(int i) { return i < num_ ? list_[i].key_ : MAXREAL; }
+    inline float ith_key(int i) const { return i < num_ ? list_[i].key_ : MAXREAL; }
 
     // -------------------------------------------------------------------------
-    inline int ith_id(int i) { return i < num_ ? list_[i].id_ : MININT; }
+    inline int ith_id(int i) const { return i < num_ ? list_[i].id_ : MININT; }
 
     // -------------------------------------------------------------------------
-    inline int size() { return num_; }
+    inline int size() const { return num_; }
 
     // -------------------------------------------------------------------------
-    inline bool isFull() { if (num_ >= k_) return true; else return false; }
+    inline bool isFull() const { if (num_ >= k_) return true; else return false; }
 
     // -------------------------------------------------------------------------
     float insert(                   // insert item

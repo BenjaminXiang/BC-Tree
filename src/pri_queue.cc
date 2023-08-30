@@ -1,4 +1,4 @@
-#include "BC_Tree/pri_queue.h"
+#include "BC-Tree/pri_queue.h"
 
 namespace p2h {
 

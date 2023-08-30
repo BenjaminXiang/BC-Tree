@@ -1,4 +1,4 @@
-#include "BC_Tree/qalsh.h"
+#include "BC-Tree/qalsh.h"
 #include <cstdint>
 
 namespace p2h {

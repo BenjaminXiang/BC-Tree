@@ -1,4 +1,4 @@
-#include "BC_Tree/util.h"
+#include "BC-Tree/util.h"
 
 namespace p2h {
     
@@ -252,6 +252,19 @@ void calc_pre_recall(               // calc precision and recall (percentage)
     }
     recall    = (i + 1) * 100.0f / top_k;
     precision = (i + 1) * 100.0f / check_k;
+}
+
+float get_pre_recall (
+    int top_k,
+    const MinK_List *list,
+    const float *gt
+){
+    int i = list->size() - 1;
+    float last = gt[top_k-1];
+    while(i >= 0 && list->ith_key(i) - last > CHECK_ERROR) {
+        --i;
+    }
+    return (i+1) / top_k;
 }
 
 // -----------------------------------------------------------------------------

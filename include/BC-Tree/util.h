@@ -109,6 +109,12 @@ void calc_pre_recall(               // calc precision and recall (percentage)
     float &recall,                      // recall value (return)
     float &precision);                  // precision value (return)
 
+float get_pre_recall (
+    int top_k,
+    const MinK_List *list,
+    const float *gt
+);
+
 // -----------------------------------------------------------------------------
 void write_index_info(              // display & write index overhead info
     float memory,                       // memory cost
